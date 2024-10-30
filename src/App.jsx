@@ -1,4 +1,6 @@
 import WeatherForecast from './WeatherForecast';
+import './App.css';
+
 
 const App = () => {
 
@@ -37,24 +39,27 @@ const App = () => {
       imgAlt: 'moon overcast by clouds icon',
       conditions: 'cloudy',
       time: 'Night',
-    },
-  ];
-  
+    }
+  ]
+
 
   return (
     <div>
-      {weatherForecasts.map((forecast, index) => (
-        <WeatherForecast
-        key={index}
-        day={forecast.day}
-        img={forecast.img}
-        imgAlt={forecast.imgAlt}
-        conditions={forecast.conditions}
-        time={forecast.time}
-      />
-      ))}
+      <h1>Local Weather</h1>
+      <section>
+        {weatherForecasts.map((forecast, index) => (
+          <WeatherForecast
+            key={index}
+            day={forecast.day}
+            img={forecast.img}
+            imgAlt={forecast.imgAlt}
+            conditions={forecast.conditions}
+            time={forecast.time}
+          />
+        ))}
+      </section>
     </div>
-  );
+  )
 }
 
 export default App

@@ -1,4 +1,4 @@
-const WeatherIcon = ({img, imgAlt }) => {
+const WeatherIcon = ({ img, imgAlt }) => {
     return <img src={img} alt={imgAlt} />
 }
 
